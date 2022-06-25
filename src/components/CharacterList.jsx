@@ -47,6 +47,7 @@ function CharacterList() {
           })}
         </div>
       )}
+      <NavPage page={page} setPage={setPage}/>
     </div>
   );
 }
