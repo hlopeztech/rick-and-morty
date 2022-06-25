@@ -1,21 +1,12 @@
-import { useEffect } from 'react';
+import CharacterList from "./components/CharacterList";
 
 function App() {
-
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch('https://rickandmortyapi.com/api/character')
-      const data = await response.json()
-      console.log(data)
-    }
-
-    fetchData()
-  }
-  , []);
-
   return (
-    <h1>Hello World</h1>
-  )
+    <div className="bg-dark text-white">
+      <h1 className="text-center display-1 py-4">Rick and Morty</h1>
+      <CharacterList />
+    </div>
+  );
 }
 
 export default App;
